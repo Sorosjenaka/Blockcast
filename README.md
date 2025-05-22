@@ -1,4 +1,4 @@
-# Blockcast
+# Blockcast 
 
 Blockcast Depin Run with Vps
 
@@ -31,6 +31,16 @@ docker compose up -d
 ```
 docker compose ps
 ```
+## Allow port
+```
+sudo ufw allow 8443
+sudo ufw allow 9190
+```
+## Restart and Run Docker
+```
+docker compose down
+docker compose up -d
+```
 ## Step 5 Regist your Node
 ```
 docker compose exec blockcastd blockcastd init
@@ -47,5 +57,10 @@ Go to website to register and put your Hardware ID and Challenge Key
 Website : https://app.blockcast.network/dashboard
 
 Wait Your node to online
+
+## Check Your Logs
+```
+docker compose logs -f blockcastd
+```
 
 
